@@ -29,9 +29,9 @@ language3 = "Python"
 name4 = "Adedayo adeboye"
 slack4 = "Adedayo"
 email4 = "timsonad09@gmail.com"
-hobby4 = ""
-country4 = ""
-discipline4 = ""
+hobby4 = "playing games"
+country4 = "Nigeria"
+discipline4 = "Pharmacy"
 language4 = "Python"
 
 # Person 5
