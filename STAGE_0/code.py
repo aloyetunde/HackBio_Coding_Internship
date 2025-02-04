@@ -17,12 +17,12 @@ discipline2 = ""
 language2 = "Python"
 
 # Person 3
-name3 = "Adewumi Ifeoluwa"
+name3 = "Adewunmi Ifeoluwa"
 slack3 = "Ifeoluwa"
 email3 = "iadewunmi39@gmail.com"
-hobby3 = ""
-country3 = ""
-discipline3 = ""
+hobby3 = "Reading"
+country3 = "Nigeria"
+discipline3 = "Physiology"
 language3 = "Python"
 
 # Person 4
