@@ -1,0 +1,50 @@
+# Team leucine information
+team_info = {
+    "Alo Yetunde": {
+        "Slack Username": "MaryAde364",
+        "Email": "aloyetunde99@gmail.com",
+        "Hobby": "Reading",
+        "Country": "Nigeria",
+        "Discipline": "Biochemistry",
+        "Preferred Programming Language": "Python"
+    },
+    "Oluchi Bolanle": {
+        "Slack Username": "Oluchi Bolanle",
+        "Email": "oluchibolanle@gmail.com",
+        "Hobby": "Journaling",
+        "Country": "Nigeria",
+        "Discipline": "Biochemistry",
+        "Preferred Programming Language": "Python"
+    },
+    "Adewunmi Ifeoluwa": {
+        "Slack Username": "Ifeoluwa",
+        "Email": "iadewunmi39@gmail.com",
+        "Hobby": "Reading",
+        "Country": "Nigeria",
+        "Discipline": "Physiology",
+        "Preferred Programming Language": "Python"
+    },
+    "Adedayo Adeboye": {
+        "Slack Username": "Adedayo",
+        "Email": "timsonad09@gmail.com",
+        "Hobby": "Playing games",
+        "Country": "Nigeria",
+        "Discipline": "Pharmacy",
+        "Preferred Programming Language": "Python"
+    },
+    "Omojuwa Iyinoluwa": {
+        "Slack Username": "Iyinomj",
+        "Email": "iyinomojuwa1@gmail.com",
+        "Hobby": "Cooking",
+        "Country": "Nigeria",
+        "Discipline": "Biotechnology",
+        "Preferred Programming Language": "Python"
+    }
+}
+# Printing the organized output
+print("Team Information:\n")
+for name, details in team_info.items():
+    print(f"Name: {name}")
+    for key, value in details.items():
+        print(f"{key}: {value}")
+    print("-" * 40)  # Separator for readability
