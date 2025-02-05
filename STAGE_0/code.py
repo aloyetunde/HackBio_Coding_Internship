@@ -11,9 +11,9 @@ language1 = "Python"
 name2 = "Oluchi Bolanle"
 slack2 = "Oluchi Bolanle"
 email2 = "oluchibolanle@gmail.com"
-hobby2 = ""
-country2 = ""
-discipline2 = ""
+hobby2 = "Journaling"
+country2 = "Nigeria"
+discipline2 = "Biochemistry"
 language2 = "Python"
 
 # Person 3
