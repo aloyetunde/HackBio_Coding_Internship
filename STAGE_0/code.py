@@ -8,7 +8,7 @@ countries = ["Nigeria", "Nigeria", "Nigeria", "Nigeria", "Nigeria"]
 disciplines = ["Biochemistry", "Biochemistry", "Physiology", "Pharmacy", "Biotechnology"]
 languages = ["Python", "Python", "Python", "Python", "Python"]
 
-# Step 2: Converting to a DataFrame-like structure (without using pandas)
+# Step 2: Converting to a DataFrame-like structure 
 dataframe = f"""
 | Name                 | Slack Username   | Email                      | Hobby         | Country  | Discipline     | Language |
 |----------------------|-----------------|----------------------------|--------------|---------|--------------|----------|
