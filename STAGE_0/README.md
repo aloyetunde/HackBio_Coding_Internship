@@ -24,7 +24,8 @@ We wrote a simple script to present the details of all team members in a structu
 Feel free to run the codes to replicate what we've done!😊
 
 ##Team Members:
-Name: Alo Yetunde
+
+1. Name: Alo Yetunde
 Slack Username: MaryAde364
 Email: aloyetunde99@gmail.com
 Hobby: Reading
@@ -32,7 +33,7 @@ Country: Nigeria
 Discipline: Biochemistry
 Preferred Programming Language: Python
 
-Name: Oluchi Bolanle
+2. Name: Oluchi Bolanle
 Slack Username: Oluchi Bolanle
 Email: oluchibolanle@gmail.com
 Hobby: Journalling
@@ -40,7 +41,7 @@ Country: Nigeria
 Discipline: Biochemistry
 Preferred Programming Language: Python
 
-Name: Adewunmi Ifeoluwa
+3. Name: Adewunmi Ifeoluwa
 Slack Username: Ifeoluwa
 Email: iadewunmi39@gmail.com
 Hobby: Reading
@@ -48,7 +49,7 @@ Country: Nigeria
 Discipline: Physiology
 Preferred Programming Language: Python
 
-Name: Adedayo Adeboye
+4. Name: Adedayo Adeboye
 Slack Username: Adedayo
 Email: timsonad09@gmail.com
 Hobby: Playing games
@@ -56,7 +57,7 @@ Country: Nigeria
 Discipline: Pharmacy
 Preferred Programming Language: Python
 
-Name: Omojuwa Iyinoluwa
+5. Name: Omojuwa Iyinoluwa
 Slack Username: Iyinomj
 Email: iyinomojuwa1@gmail.com
 Hobby: Cooking
