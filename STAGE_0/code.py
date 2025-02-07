@@ -21,3 +21,9 @@ dataframe = f"""
 
 # Step 3: Printing the structured information
 print(dataframe)
+
+"""
+GitHub links of team members
+https://github.com/TimsonTed
+https://github.com/Ifeoluwa734
+"""
