@@ -24,6 +24,9 @@ print(dataframe)
 
 """
 GitHub links of team members
-https://github.com/TimsonTed
+https://github.com/aloyetunde
+https://github.com/CreativeLuchi
 https://github.com/Ifeoluwa734
+https://github.com/TimsonTed
+https://github.com/IyinOmojuwa
 """
