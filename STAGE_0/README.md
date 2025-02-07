@@ -22,3 +22,44 @@ We wrote a simple script to present the details of all team members in a structu
 - The final step was to print (dataframe).
 
 Feel free to run the codes to replicate what we've done!😊
+
+##Team Members:
+Name: Alo Yetunde
+Slack Username: MaryAde364
+Email: aloyetunde99@gmail.com
+Hobby: Reading
+Country: Nigeria
+Discipline: Biochemistry
+Preferred Programming Language: Python
+
+Name: Oluchi Bolanle
+Slack Username: Oluchi Bolanle
+Email: oluchibolanle@gmail.com
+Hobby: Journalling
+Country: Nigeria
+Discipline: Biochemistry
+Preferred Programming Language: Python
+
+Name: Adewunmi Ifeoluwa
+Slack Username: Ifeoluwa
+Email: iadewunmi39@gmail.com
+Hobby: Reading
+Country: Nigeria
+Discipline: Physiology
+Preferred Programming Language: Python
+
+Name: Adedayo Adeboye
+Slack Username: Adedayo
+Email: timsonad09@gmail.com
+Hobby: Playing games
+Country: Nigeria
+Discipline: Pharmacy
+Preferred Programming Language: Python
+
+Name: Omojuwa Iyinoluwa
+Slack Username: Iyinomj
+Email: iyinomojuwa1@gmail.com
+Hobby: Cooking
+Country: Nigeria
+Discipline: Biotechnology
+Preferred Programming Language: Python
