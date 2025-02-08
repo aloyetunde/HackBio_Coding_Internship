@@ -18,7 +18,7 @@
 We wrote a simple script to present the details of all team members in a structured tabular form. To achieve this; 
 - We first created lists to be the header for the table and the required information were stored in each list as strings.
 - A varaible named "dataframe" was then created by making use of the f-string which allows for interpolation of variables and operations in a string.
-- The items in each string were accessed making use of their indexes and arranged making use of dashes snd strokes to achieve a tabular format.
+- The items in each string were accessed making use of their indexes and arranged making use of dashes and strokes to achieve a tabular format.
 - The final step was to print (dataframe).
 
 Here's the link to our script, https://github.com/aloyetunde/HackBio_Coding_Internship/blob/main/STAGE_0/code.py, feel free to run the codes to replicate what we've done!😊
