@@ -64,3 +64,5 @@ Hobby: Cooking
 Country: Nigeria
 Discipline: Biotechnology
 Preferred Programming Language: Python
+
+#Check out our video posted on LinkedIn here: https://www.linkedin.com/posts/bolanleogungbemi_hackbio-bioinformaticsinternship-python-activity-7293795024301879296-GCIj?utm_source=share&utm_medium=member_ios
