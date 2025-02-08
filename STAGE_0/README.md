@@ -65,6 +65,8 @@ Preferred Programming Language: Python
 - The final step was to print (dataframe).
 
 Here's the link to our script, https://github.com/aloyetunde/HackBio_Coding_Internship/blob/main/STAGE_0/code.py, feel free to run the codes to replicate what we've done!😊
+
+
 #Check out our video posted on LinkedIn here: https://www.linkedin.com/posts/bolanleogungbemi_hackbio-bioinformaticsinternship-python-activity-7293795024301879296-GCIj?utm_source=share&utm_medium=member_ios
 
 
