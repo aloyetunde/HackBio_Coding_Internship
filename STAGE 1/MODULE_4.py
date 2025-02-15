@@ -130,7 +130,7 @@ def translate_dna(dna_sequence):
         # Get the current codon
         codon = dna_sequence[i:i+3]
         # Find the corresponding amino acid
-        amino_acid = codon_dict.get(codon, 'X')  # 'X' means unknown codon
+        amino_acid = codon_table.get(codon, 'X')  # 'X' means unknown codon
         if amino_acid == '_':  # Stop translation if stop codon is found
             break
         # Add the amino acid to the protein sequence
