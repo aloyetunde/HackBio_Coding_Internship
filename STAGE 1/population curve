@@ -1,0 +1,28 @@
+import numpy as np
+import pandas as pd
+
+# Function to simulate logistic growth with random lag and exponential phase
+def logistic_growth(K=1500, P0=20, r=0.3, time_steps=100):
+    time = np.arange(0, time_steps)  # Time from 0 to 100
+    lag_phase = np.random.uniform(5, 25)  # Random lag duration
+    exp_phase = np.random.uniform(25, 65)  # Random exponential duration
+
+    # Logistic growth formula
+    population = K / (1 + ((K - P0) / P0) * np.exp(-r * (time - lag_phase)))
+    population[time < lag_phase] = P0  # Keep population constant in lag phase
+
+    return pd.DataFrame({'Time': time, 'Population': population})
+
+# Generate 100 different growth curves
+growth_curves = [logistic_growth() for _ in range(100)]
+df = pd.concat(growth_curves, keys=range(100), names=['CurveID'])
+
+# Function to find time to reach 80% of carrying capacity
+def time_to_80_percent(df, K=1500):
+    target = 0.8 * K
+    for curve_id, curve_data in df.groupby(level=0):
+        time_reached = curve_data[curve_data['Population'] >= target]['Time'].min()
+        print(f"Curve {curve_id}: Reached 80% at time {time_reached}")
+
+# Run function on generated data
+time_to_80_percent(df)
