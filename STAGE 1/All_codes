@@ -1,0 +1,82 @@
+#TASK 1
+# Function to translate DNA to protein
+def translate_dna(dna_seq): 
+# Standard genetic code dictionary with full amino acid names
+    codon_table = {
+        'ATA': 'Isoleucine', 'ATC': 'Isoleucine', 'ATT': 'Isoleucine', 'ATG': 'Methionine',
+        'ACA': 'Threonine', 'ACC': 'Threonine', 'ACG': 'Threonine', 'ACT': 'Threonine',
+        'AAC': 'Asparagine', 'AAT': 'Asparagine', 'AAA': 'Lysine', 'AAG': 'Lysine',
+        'AGC': 'Serine', 'AGT': 'Serine', 'AGA': 'Arginine', 'AGG': 'Arginine',
+        'CTA': 'Leucine', 'CTC': 'Leucine', 'CTG': 'Leucine', 'CTT': 'Leucine',
+        'CCA': 'Proline', 'CCC': 'Proline', 'CCG': 'Proline', 'CCT': 'Proline',
+        'CAC': 'Histidine', 'CAT': 'Histidine', 'CAA': 'Glutamine', 'CAG': 'Glutamine',
+        'CGA': 'Arginine', 'CGC': 'Arginine', 'CGG': 'Arginine', 'CGT': 'Arginine',
+        'GTA': 'Valine', 'GTC': 'Valine', 'GTG': 'Valine', 'GTT': 'Valine',
+        'GCA': 'Alanine', 'GCC': 'Alanine', 'GCG': 'Alanine', 'GCT': 'Alanine',
+        'GAC': 'Aspartic acid', 'GAT': 'Aspartic acid', 'GAA': 'Glutamic acid', 'GAG': 'Glutamic acid',
+        'GGA': 'Glycine', 'GGC': 'Glycine', 'GGG': 'Glycine', 'GGT': 'Glycine',
+        'TCA': 'Serine', 'TCC': 'Serine', 'TCG': 'Serine', 'TCT': 'Serine',
+        'TTC': 'Phenylalanine', 'TTT': 'Phenylalanine', 'TTA': 'Leucine', 'TTG': 'Leucine',
+        'TAC': 'Tyrosine', 'TAT': 'Tyrosine', 'TAA': 'Stop', 'TAG': 'Stop', 'TGA': 'Stop'
+    }
+
+    protein = []
+    
+    # Iterate over the sequence in steps of 3 (codon size)
+    for i in range(0, len(dna_seq) - 2, 3):
+        codon = dna_seq[i:i+3]  # Extract codon
+        amino_acid = codon_table.get(codon, 'Unknown')  # Translate, 'Unknown' if not found
+        if amino_acid == 'Stop':  # Stop translation at stop codon
+            break
+        protein.append(amino_acid)
+
+    return "-".join(protein)  # Join with hyphen for better readability
+
+# Example DNA sequence
+dna_sequence = "ATGGCTTTTCAAGGA"
+protein_sequence = translate_dna(dna_sequence)
+print("Protein Sequence:", protein_sequence)
+
+#TASK 2 AND 3
+import numpy as np
+import pandas as pd
+
+# Function to simulate logistic growth with random lag and exponential phase
+def logistic_growth(K=1500, P0=20, r=0.3, time_steps=100):
+    time = np.arange(0, time_steps)  # Time from 0 to 100
+    lag_phase = np.random.uniform(5, 25)  # Random lag duration
+    exp_phase = np.random.uniform(25, 65)  # Random exponential duration
+
+    # Logistic growth formula
+    population = K / (1 + ((K - P0) / P0) * np.exp(-r * (time - lag_phase)))
+    population[time < lag_phase] = P0  # Keep population constant in lag phase
+
+    return pd.DataFrame({'Time': time, 'Population': population})
+
+# Generate 100 different growth curves
+growth_curves = [logistic_growth() for _ in range(100)]
+df = pd.concat(growth_curves, keys=range(100), names=['CurveID'])
+
+# Function to find time to reach 80% of carrying capacity
+def time_to_80_percent(df, K=1500):
+    target = 0.8 * K
+    for curve_id, curve_data in df.groupby(level=0):
+        time_reached = curve_data[curve_data['Population'] >= target]['Time'].min()
+        print(f"Curve {curve_id}: Reached 80% at time {time_reached}")
+
+# Run function on generated data
+time_to_80_percent(df)
+
+#TASK 4
+#slack username; Iyinomj
+#twitter handle: iyinomj
+def cal_hd(Handles) :
+ Handles = ["Iyinomj", "iyinomj"]
+for i in range(len(Handles)):
+    for j in range(i + 1, len(Handles)):  # Compare each pair once
+        # Calculate Hamming Distance
+        hamming_distance = sum(1 for a, b in zip(Handles[i], Handles[j]) if a != b)
+
+        print(f"Hamming distance between {Handles[i]} and {Handles[j]}: {hamming_distance}")
+
+#GitHub link: 
