@@ -9,31 +9,33 @@
 
 📚Key Python concepts we used:
 
-- #Conditionals# - (if, elif and else statements).
-- #Loops# - which aid iteration of codes (For Loop).
-- #Functions# - which are needed to pass data and can be called anytime it is needed while scripting.
-- #String Manipulation# - Essential for our Hamming distance calculations.
+- **Conditionals** - (if, elif and else statements).
+- **Loops** - which aid iteration of codes (For Loop).
+- **Functions** - which are needed to pass data and can be called anytime it is needed while scripting.
+- **String Manipulation** - Essential for our Hamming distance calculations.
 
 ✅Task Implementation 
+
 🧬 Task 1: DNA to Protein Translation
-We defined a function (dna_translation) that:
+- Created codon_table which is a standard genetic code dictionary with full amino acid names.
+- We defined a function (dna_translation) that:
 •	Takes a DNA sequence as input.
 •	Splits it into codons (triplets of bases).
-•	Uses a standard genetic code dictionary with full amino acid names (codon_table) to translate each triplet into an amino acid.
-•Stops transalation at stop codon
+•	Uses the (codon_table) dictionary to translate each triplet into an amino acid.
+• Stops transalation at stop codon.
 •	Returns the protein sequence! 
 
-📈 Step 2: Logistic Growth Curve
+📈 Task 2: Logistic Growth Curve
 We created a function that:
 •	Simulates logistic population growth.
 •	Includes randomized lag and exponential phases.
 •	Uses mathematical modeling to reflect real-life population dynamics.
 
-📊 Step 3: Generating 100 Growth Curves & Finding 80% Max Growth
+📊 Task 3: Generating 100 Growth Curves & Finding 80% Max Growth
 •	Our function generates 100 unique growth curves and stores them in a dataframe.
 •	Another function then analyzes the data and determines the time to reach 80% of carrying capacity.
 
-🔢 Step 4: Hamming Distance Calculation
+🔢 Task 4: Hamming Distance Calculation
 •	This function takes in two strings (our Slack username and X handle).
 •	Compares them character by character to count the differences.
 •	Returns the Hamming distance (i.e., how “different” they are).
