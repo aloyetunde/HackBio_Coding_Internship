@@ -1,6 +1,7 @@
 #slack username; Iyinomj
 #twitter handle: iyinomj
-Handles = ["Iyinomj", "iyinomj"]
+def cal_hd(Handles) :
+ Handles = ["Iyinomj", "iyinomj"]
 for i in range(len(Handles)):
     for j in range(i + 1, len(Handles)):  # Compare each pair once
         # Calculate Hamming Distance
