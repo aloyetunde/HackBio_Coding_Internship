@@ -1,0 +1,8 @@
+#slack username; Iyinomj
+#twitter handle: iyinomj
+Handles = ["Iyinomj","iyinomj"]
+for handle1 in Handles:
+        if handle1 != handle2:
+          # Calculate Hamming Distance
+            hamming_distance = sum(1 for a, b in zip(handle1, handle2) if a != b)
+            print(f"Hamming distance between {handle1} and {handle2}: {hamming_distance}")
