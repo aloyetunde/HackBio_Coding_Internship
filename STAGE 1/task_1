@@ -1,6 +1,6 @@
 # Function to translate DNA to protein
-def translate_dna(dna_seq):
-    # Standard genetic code dictionary with full amino acid names
+def translate_dna(dna_seq): 
+# Standard genetic code dictionary with full amino acid names
     codon_table = {
         'ATA': 'Isoleucine', 'ATC': 'Isoleucine', 'ATT': 'Isoleucine', 'ATG': 'Methionine',
         'ACA': 'Threonine', 'ACC': 'Threonine', 'ACG': 'Threonine', 'ACT': 'Threonine',
