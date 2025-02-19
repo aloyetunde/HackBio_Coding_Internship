@@ -68,8 +68,8 @@ def time_to_80_percent(df, K=1500):
 time_to_80_percent(df)
 
 #TASK 4
-#slack username; Iyinomj
-#twitter handle: iyinomj
+##slack username; Iyinomj
+##twitter handle: iyinomj
  Handles = ["Iyinomj", "iyinomj"]
 for i in range(len(Handles)):
     for j in range(i + 1, len(Handles)):  # Compare each pair once
