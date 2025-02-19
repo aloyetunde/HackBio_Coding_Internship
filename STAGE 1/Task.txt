@@ -1,0 +1,19 @@
+Team Instructions:
+Feel free to maintain your team.
+If you prefer to work solo, still go ahead
+If you want to switch teams, please let your current team know before you exit.
+You can now increase your team population to a maximum of 6
+As usual, you can decide to use Python or R, even within a team, but:
+You have to submit them differently.
+You have to provide all 4 functions for each language when submitting
+Deadline: Sunday, 15th Feb.
+Functions Galore!
+Write a function for translating DNA to protein
+Write a function that simulates and generates a logistic population growth curve. Your function should include 2 extra parameters that randomize the length of the lag phase and the exponential phase [See population curve here] . Most living populations follow a logistic population growth. Therefore, your growth curve can be: Population Size vs Time, Cell density vs Time, OD vs Time, CFU vs Time, etc
+Using your function, generate a dataframe with 100 different growth curves
+Write a function for determining the time to reach 80% of the maximum growth; usually the carrying capacity
+Finally, write a function for calculating the hamming distance between your Slack username and twitter/X handle (synthesize if you don’t have one). Feel free to pad it with extra words if they are not of the same length.
+(29 kB)
+C:\Users\Mary\Downloads\Logistic Growth curve.jpg
+
+https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fsrep15159/MediaObjects/41598_2015_Article_BFsrep15159_Fig1_HTML.jpg
