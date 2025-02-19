@@ -30,4 +30,5 @@ https://github.com/Ifeoluwa734
 https://github.com/TimsonTed
 https://github.com/IyinOmojuwa
 """
+
 #Link to LinkedIn post: https://www.linkedin.com/posts/bolanleogungbemi_hackbio-bioinformaticsinternship-python-activity-7293795024301879296-GCIj?utm_source=share&utm_medium=member_ios
