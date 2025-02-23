@@ -1,3 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+# load the datasets
+sift_dataset = "https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/R/datasets/sift.tsv"
+sift_df = pd.read_csv (sift_dataset, sep = ',') # assign data set for SIFT
+foldx_dataset = "https://raw.githubusercontent.com/HackBio-Internship/public_datasets/main/R/datasets/foldX.tsv"
+foldx_df = pd.read_csv (foldx_dataset, sep = ',') # assign data set for FoldX
