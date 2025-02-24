@@ -1,0 +1,76 @@
+!pip install pandas
+import pandas as pd
+!pip install matplotlib seaborn
+import matplotlib.pyplot as plt
+import seaborn as sns
+!pip install --upgrade pip
+# Define column names
+sift_columns = ["Protein", "Amino_Acid", "sift_Score"]
+foldx_columns = ["Protein", "Amino_Acid", "foldX_Score"]
+
+# Read datasets with correct separation and column names
+sift_df = pd.read_csv(sift_url, sep="\t", names=sift_columns, header=0, engine="python")
+foldx_df = pd.read_csv(foldx_url, sep="\t", names=foldx_columns, header=0, engine="python")
+
+# Display first few rows to check structure
+print("SIFT Dataset:")
+print(sift_df.head())
+
+print("\nFoldX Dataset:")
+print(foldx_df.head())
+
+# Print column names to confirm they are correct now
+print("\nUpdated SIFT Dataset Columns:", sift_df.columns.tolist())
+print("Updated FoldX Dataset Columns:", foldx_df.columns.tolist())
+# Create the specific_Protein_aa column
+sift_df["specific_Protein_aa"] = sift_df["Protein"] + "_" + sift_df["Amino_Acid"]
+foldx_df["specific_Protein_aa"] = foldx_df["Protein"] + "_" + foldx_df["Amino_Acid"]
+
+# Merge datasets on 'specific_Protein_aa'
+final_df = pd.merge(sift_df, foldx_df, on="specific_Protein_aa", how="inner")
+
+# Display first few rows of the final dataset
+print("Final Merged Dataset:")
+print(final_df.head())
+
+# Save the merged dataset to a new TSV file
+final_df.to_csv("merged_dataset.tsv", sep="\t", index=False)
+# Convert scores to numeric to avoid issues with string data
+final_df["sift_Score"] = pd.to_numeric(final_df["sift_Score"], errors="coerce")
+final_df["foldX_Score"] = pd.to_numeric(final_df["foldX_Score"], errors="coerce")
+
+# Filter for mutations that are deleterious in both SIFT and FoldX
+deleterious_mutations = final_df[(final_df["sift_Score"] < 0.05) & (final_df["foldX_Score"] > 2)]
+
+# Display the filtered dataset
+print("Deleterious Mutations (Affect Both Structure & Function):")
+print(deleterious_mutations)
+
+# Save to a new TSV file
+deleterious_mutations.to_csv("deleterious_mutations.tsv", sep="\t", index=False)
+# Extract the first amino acid from mutations
+deleterious_mutations.loc[:, "First_Amino_Acid"] = deleterious_mutations["Amino_Acid_x"].str[0]
+
+
+# Display the first few rows to confirm
+print(deleterious_mutations[["Amino_Acid_x", "First_Amino_Acid"]].head())
+# Count occurrences of each first amino acid
+amino_acid_counts = deleterious_mutations["First_Amino_Acid"].value_counts()
+
+# Display frequency table
+print(amino_acid_counts)
+# Bar plot
+plt.figure(figsize=(12, 6))
+sns.barplot(x=amino_acid_counts.index, y=amino_acid_counts.values, palette="viridis")
+plt.xlabel("Amino Acid")
+plt.ylabel("Frequency")
+plt.title("Frequency of First Amino Acids in Deleterious Mutations")
+plt.xticks(rotation=45)
+plt.show()
+
+# Pie chart
+plt.figure(figsize=(8, 8))
+plt.pie(amino_acid_counts, labels=amino_acid_counts.index, autopct="%1.1f%%", colors=sns.color_palette("viridis", len(amino_acid_counts)))
+plt.title("Distribution of First Amino Acids in Deleterious Mutations")
+plt.show()
+
