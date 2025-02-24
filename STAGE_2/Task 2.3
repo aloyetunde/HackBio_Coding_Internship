@@ -61,14 +61,16 @@ selected_metabolites = outliers.head(6)['Metabolite'].tolist()
 # Time-series line plot for selected metabolites
 plt.figure(figsize=(10, 6))
 
+time_order = ['0h', '8h', '24h']  # Corrected time sequence
+
 for metabolite in selected_metabolites:
     if metabolite in df.columns:
-        wt_values = df[df["Plant_Type"] == "WT"].groupby("Time_Point")[metabolite].mean()
-        mutant_values = df[df["Plant_Type"] == "Mutant"].groupby("Time_Point")[metabolite].mean()
+        wt_values = df[df["Plant_Type"] == "WT"].groupby("Time_Point")[metabolite].mean().reindex(time_order)
+        mutant_values = df[df["Plant_Type"] == "Mutant"].groupby("Time_Point")[metabolite].mean().reindex(time_order)
 
         # Plot WT and Mutant trends
-        plt.plot(wt_values.index, wt_values.values, marker='o', linestyle='-', label=f'WT - {metabolite}')
-        plt.plot(mutant_values.index, mutant_values.values, marker='s', linestyle='--', label=f'Mutant - {metabolite}')
+        plt.plot(time_order, wt_values.values, marker='o', linestyle='-', label=f'WT - {metabolite}')
+        plt.plot(time_order, mutant_values.values, marker='s', linestyle='--', label=f'Mutant - {metabolite}')
 
 # Formatting the plot
 plt.xlabel('Time (h)')
