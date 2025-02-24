@@ -2,6 +2,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import seaborn as sns
+
+
 
 # Load dataset from URL
 dataset_url = "https://raw.githubusercontent.com/HackBio-Internship/2025_project_collection/refs/heads/main/Python/Dataset/Pesticide_treatment_data.txt"
@@ -78,4 +81,95 @@ plt.ylabel('Metabolic Response')
 plt.title('Metabolic Response Over Time for Selected Metabolites')
 plt.legend()
 plt.grid(True)
+plt.show()
+
+#Residual Distribution Histogram
+
+plt.figure(figsize=(8,5))
+sns.histplot(deltaM_df['Residual'], bins=20, kde=True, color='steelblue', edgecolor='black')
+plt.axvline(0, color='red', linestyle='--', label='Zero Residual')
+plt.xlabel('Residual (ΔM_Mutant - ΔM_WT)')
+plt.ylabel('Frequency')
+plt.title('Residual Distribution')
+plt.legend()
+plt.show()
+
+
+#volcano plots
+from scipy.stats import ttest_ind
+
+# Compute p-values (t-test comparing WT and Mutant ΔM values)
+p_values = [ttest_ind(df[df['Plant_Type'] == 'WT'][metabolite], 
+                       df[df['Plant_Type'] == 'Mutant'][metabolite], 
+                       nan_policy='omit')[1] for metabolite in deltaM_df['Metabolite']]
+
+# Add to dataframe
+deltaM_df['p-value'] = p_values
+deltaM_df['-log10(p)'] = -np.log10(deltaM_df['p-value'])
+
+# Scatter plot (volcano)
+plt.figure(figsize=(8,6))
+sns.scatterplot(x=deltaM_df['Residual'], y=deltaM_df['-log10(p)'], color='grey')
+
+# Highlight significant outliers
+significant = deltaM_df[abs(deltaM_df['Residual']) > residual_cutoff]
+sns.scatterplot(x=significant['Residual'], y=significant['-log10(p)'], color='salmon')
+
+plt.axvline(x=-residual_cutoff, color='black', linestyle='--')
+plt.axvline(x=residual_cutoff, color='black', linestyle='--')
+plt.xlabel('Residual (ΔM_Mutant - ΔM_WT)')
+plt.ylabel('-log10(p-value)')
+plt.title('Volcano Plot: Residual vs. Significance')
+plt.show()
+
+
+#Boxplot
+plt.figure(figsize=(12, 6))
+for i, metabolite in enumerate(selected_metabolites):
+    plt.subplot(2, 3, i + 1)
+    sns.boxplot(x='Time_Point', y=metabolite, hue='Plant_Type', data=df)
+    plt.title(metabolite)
+plt.tight_layout()
+plt.show()
+
+
+#heatmap
+
+
+# Select only metabolite columns (excluding metadata)
+metabolite_data = df.set_index("Sample").iloc[:, :-3]  # Exclude metadata columns
+
+# Normalize data (z-score)
+normalized_data = (metabolite_data - metabolite_data.mean()) / metabolite_data.std()
+
+# Create metadata for annotations (WT vs. Mutant, Time Points)
+row_metadata = df.set_index("Sample")[['Plant_Type', 'Time_Point']]
+
+# Convert categorical metadata to numerical categories for visualization
+row_metadata['Plant_Type'] = row_metadata['Plant_Type'].map({'WT': 0, 'Mutant': 1})
+row_metadata['Time_Point'] = row_metadata['Time_Point'].map({'0h': 0, '8h': 1, '24h': 2})
+
+# Define color palettes for annotations
+plant_colors = {0: "blue", 1: "green"}   # WT = blue, Mutant = green
+time_colors = {0: "black", 1: "orange", 2: "red"}  # 0h = black, 8h = orange, 24h = red
+
+# Convert metadata to color labels
+row_colors = pd.DataFrame({
+    "Plant_Type": row_metadata["Plant_Type"].map(plant_colors),
+    "Time_Point": row_metadata["Time_Point"].map(time_colors)
+}, index=row_metadata.index)
+
+# Create the heatmap with hierarchical clustering
+sns.clustermap(
+    normalized_data.T,  # Transpose to get metabolites as rows
+    cmap="coolwarm", 
+    linewidths=0.5, 
+    center=0, 
+    row_cluster=True,  # Cluster metabolites
+    col_cluster=True,  # Cluster samples
+    col_colors=row_colors,  # Add sample annotations
+    figsize=(12, 10)
+)
+
+plt.title("Hierarchical Clustering Heatmap of Metabolic Response")
 plt.show()
