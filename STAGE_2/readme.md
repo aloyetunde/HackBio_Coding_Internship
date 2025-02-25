@@ -1,12 +1,10 @@
-🚀 HackBio_Coding_Internship - #Team Leucine
+# 🚀 HackBio_Coding_Internship - #Team Leucine
 
-#Stage 2 Task
+## 📌 Stage 2 Task Instructions:
 
-📌Task Instructions:
+### Task Code 2.1: Microbiology
 
-Task Code 2.1: Microbiology
-
-• Look at this dataset here https://raw.githubusercontent.com/HackBio-Internship/2025_project_collection/refs/heads/main/Python/Dataset/mcgc.tsv.
+• Given this dataset [dataset](https://raw.githubusercontent.com/HackBio-Internship/2025_project_collection/refs/heads/main/Python/Dataset/mcgc.tsv).
 
 • Plot all the growth curves of OD600 vs Time for the different Strains with the following instructions.
 
