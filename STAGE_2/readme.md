@@ -1,8 +1,6 @@
-# 🚀 HackBio_Coding_Internship - #Team Leucine
+# 🚀 HackBio_Coding_Internship - #Team Leucine - Stage 2
 
-## 📌 Stage 2 Task Instructions:
-
-### Task Code 2.1: Microbiology
+### 📌 Task Code 2.1: Microbiology
 
 • Given this dataset [dataset](https://raw.githubusercontent.com/HackBio-Internship/2025_project_collection/refs/heads/main/Python/Dataset/mcgc.tsv).
 
@@ -20,8 +18,10 @@
 
 • What do you see? Explain your observations as comments in your code.
 
+### ✅Task Implementation
 
-Task Code 2.3:
+
+### 📌 Task Code 2.3:
 Botany and Plant Science
 Have a look at this dataset
 Some scientists are trying to engineer mutants for a crop to become resistant to a pesticide
