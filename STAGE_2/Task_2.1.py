@@ -162,3 +162,4 @@ else:
     print("Could not find Knock-Out (-) and Knock-In (+) strain labels in dataset.")
 
 #Github link: https://github.com/aloyetunde/HackBio_Coding_Internship/blob/main/STAGE_2/Task_2.1.py
+##LinkedIn video link: https://www.linkedin.com/posts/omojuwa-iyinoluwa-5a0249242_bioinformatics-phyton-hackbio-activity-7300504327775768577-uu6-?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADwxPAgBbnOT4_7yhFfQOdqRfEafIUZwkc4&utm_campaign=whatsapp
