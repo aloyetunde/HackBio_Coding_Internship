@@ -21,8 +21,8 @@
 ### ✅Task Implementation
 
 
-### 📌 Task Code 2.3:
-Botany and Plant Science
+### 📌 Task Code 2.3: Botany and Plant Science
+
 Have a look at this dataset
 Some scientists are trying to engineer mutants for a crop to become resistant to a pesticide
 They compared the metabolic response of the engineered mutants to the metabolic response of the wild type plants
@@ -37,37 +37,59 @@ Color metabolites that fall outside this range salmon.
 What are these metabolites. How do you explain the trends you see on either direction of the plot?
 Pick any 6 metabolites that fall outside this range and generate a line plot that spans from their 0h treatment to their 8h and 24hr.
 What can you say about the plots you see?
-Task Code 2.4:
-Biochemistry & Oncology
-Proteins structures are known to be strongly connected to their functions. However, at the amino acid level, not all amino acids contribute to structure and function equally. Galardini and colleagues decided to investigate the impact of all possible individual, non synonymous nonsense mutations on the structure and function of protein.
-The functional impact was computed as SIFT scores and the structural impact was calculated as FoldX Score (in kCal/mol).
-Dataset Here:
-SIFT Dataset
-FoldX Dataset
-Task
-Import both sift and foldx datasets; in both datasets, create a column specific_Protein_aa which will be a cantenation of the Protein and Amino_acid columns such that If you have Protein A5A607 and Amino_acid E63D, you have specific_Protein_aa A5A607_E63D
-Using the specific_Protein_aa column, merge sift and foldx dataset into one final dataframe.
-According to the authors;
-A SIFT Score below 0.05 is deleterious
-A FoldX score greater than 2 kCal/mol is deleterious
-Using the criteria above, Find all mutations that have a SIFT score below 0.05 and FoldX Score above 2 (i.e: Mutations that affect both structure and function)
-Study the amino acid substitution nomenclature
-Investigate for the amino acid that has the most functional and structural impact
-Hint: Using the amino acid column, find a way to select the first amino acid. Solution here
-Generate a frequency table for all the amino acids
-Using the amino frequency table above, generate a barplot and pie chart to represent the frequency of the amino acids.
-Briefly describe the amino acid with the highest impact on protein structure and function
-What can you say about the structural property and functional property of amino acids with more than 100 occurences.
-Task Code 2.6:
-Transcriptomics
+
+### ✅Task Implementation
+
+The code analyzes metabolic changes in wild-type (WT) and mutant plants exposed to a pesticide by calculating the difference in metabolic response (AM) between pesticide treatment and the DMSO control after 24 hours. It generates a scatter plot comparing AM_WT vs. AM_Mutant, highlighting metabolites that behave differently in mutants (outliers) using color coding (grey = similar response, salmon = significantly different response). Finally, it selects six key metabolites with the most significant differences and plots their time-series trends (Oh → 8h → 24h) to visualize how pesticide resistance alters metabolism over time. These visual outputs help identify potential biomarkers and metabolic pathways involved in pesticide resistance
+
+### 📌 Task Code 2.4: Biochemistry & Oncology
+
+This project analyzes the impact of non-synonymous mutations on protein structure and function. We use SIFT scores to measure functional effects and FoldX scores to assess structural stability.
+Dataset Description
+We worked with two datasets:
+•	SIFT Dataset: Contains protein IDs, mutations, and SIFT scores.
+•	FoldX Dataset: Contains protein IDs, mutations, and FoldX scores (kCal/mol).
+
+#### Objectives
+
+1.	Merge datasets: Create a unique identifier (specific_Protein_aa) for each mutation.
+   
+2.	Filter deleterious mutations:
+o	SIFT Score < 0.05 (Functionally damaging)
+o	FoldX Score > 2 (Structurally destabilizing)
+
+3.	Analyze amino acid impact: Identify the most affected amino acids and visualize mutation frequency.
+   
+#### Project Workflow
+
+1.	Data Preprocessing
+o	Load and clean the SIFT and FoldX datasets.
+o	Create a new column (specific_Protein_aa) by concatenating Protein ID and Mutation.
+o	Merge datasets based on this column.
+
+2.	Deleterious Mutation Identification
+o	Filter mutations where SIFT < 0.05 and FoldX > 2.
+
+3.	Amino Acid Frequency Analysis
+o	Extract the first amino acid from each mutation.
+o	Count occurrences and visualize the distribution using bar plots and pie charts.
+
+#### Results & Findings
+
+•	Most impacted amino acid: Glycine (G) had the highest mutation frequency.
+•	Structural & Functional Significance:
+o	Amino acids with over 100 mutations play key roles in protein stability.
+o	Their mutations can severely disrupt protein folding and function, which may lead to diseases.
+
+### 📌 Task Code 2.6: Transcriptomics
+
 This is a processed RNAseq dataset involving reading in quantitated gene expression data from an RNA-seq experiment, exploring the data using base R functions and then interpretation. The dataset contains an experiment between a diseased cell line and diseased cell lines treated with compound X. The difference in expression change between the two health status is computed as Fold change to log 2 (Log2FC) and the significance of each is computed in p-value.
 Access Dataset Here
 Task:
 Generate a volcano plot. (Hint search for volcano plot online)
 Determine the upregulated genes (Genes with Log2FC > 1 and pvalue < 0.01)
 Determine the downregulated genes (Genes with Log2FC < -1 and pvalue < 0.01)
-What are the functions of the top 5 upregulated genes and top 5 downregulated genes. (Use genecards)
-Task Code 2.7:
+What are the functions of the top 5 upregulated genes and top 5 downregulated genes. (Use genecards
 
 
 Write a function for translating DNA to protein 🧬
@@ -85,4 +107,4 @@ Write a function for translating DNA to protein 🧬
 📊 T
 
 🔢 
-Here's the link to our script, https://github.com/aloyetunde/HackBio_Coding_Internship/blob/main/STAGE%201/All_codes , feel free to run the codes to replicate what we've done!😊
+Here's the link to the folder containing our scripts, https://github.com/aloyetunde/HackBio_Coding_Internship/blob/main/STAGE%201/All_codes , feel free to run the codes to replicate what we've done!😊
