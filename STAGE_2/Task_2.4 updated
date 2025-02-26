@@ -74,3 +74,6 @@ plt.pie(amino_acid_counts, labels=amino_acid_counts.index, autopct="%1.1f%%", co
 plt.title("Distribution of First Amino Acids in Deleterious Mutations")
 plt.show()
 
+#Github Link: https://github.com/aloyetunde/HackBio_Coding_Internship/edit/main/STAGE_2/Task_2.4%20updated
+#LinkedIn video link: https://www.linkedin.com/posts/omojuwa-iyinoluwa-5a0249242_bioinformatics-phyton-hackbio-activity-7300504327775768577-uu6-?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADwxPAgBbnOT4_7yhFfQOdqRfEafIUZwkc4&utm_campaign=whatsapp
+
