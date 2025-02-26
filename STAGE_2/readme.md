@@ -1,3 +1,4 @@
+
 # 🚀 HackBio_Coding_Internship - #Team Leucine - Stage 2
 
 ## Exploring Microbiology, Plant Science, Biochemistry & Transcriptomics Through Bioinformatics using Python! 😉😎💃
@@ -29,6 +30,28 @@ Below are more details on each task:
 • Is there a statistical difference in the time it takes the knock out strains to reach their maximum carrying capacity compared to the knock in strains. What do you see? Explain your observations as comments in your code.
 
 ##### ✅Task Implementation
+This project investigates metabolic differences between wild-type (WT) and mutant strains, focusing on metabolic activity and growth patterns. It examines whether knock-out and knock-in strains reach their maximum carrying capacity at different rates. We analyzed metabolic response data across multiple strains and time points.  
+
+#### Objectives  
+1. Compute ΔM (Metabolic Response Difference) between WT and mutant strains.  
+2. Visualize metabolic trends using scatter plots and residual analysis.  
+3. Identify outlier metabolites with significant deviations.  
+4. Compare knock-out vs. knock-in strains to assess growth rate differences.  
+
+#### Project Workflow  
+1. Data Processing: Extract metabolic response values, compute means, and analyze residuals.  
+2. Metabolic Response Analysis: Generate scatter plots and highlight metabolic shifts.  
+3. Outlier Identification: Detect and visualize extreme metabolic deviations.  
+4. Knock-out vs. Knock-in Comparison: Evaluate statistical differences in time to maximum capacity.  
+
+#### Results & Findings  
+- Some mutants exhibit significant metabolic shifts.  
+- Knock-out vs. Knock-in Growth Differences:
+  - Slower knock-out growth suggests metabolic impairment.  
+  - Slower knock-in growth may indicate an added metabolic burden.  
+  - Statistical tests confirm significance.  
+
+This study helps understand metabolic adaptations in genetically modified strains.
 
 
 ### 📌 Task Code 2.3: Botany and Plant Science
@@ -108,6 +131,30 @@ Task:
 - Determine the upregulated genes (Genes with Log2FC > 1 and pvalue < 0.01)
 - Determine the downregulated genes (Genes with Log2FC < -1 and pvalue < 0.01)
 - What are the functions of the top 5 upregulated genes and top 5 downregulated genes. (Use genecards)
+- 
+#### Project Workflow
+
+1.	Data Cleaning and Exploration
+o	Load and clean [Dataset](https://gist.githubusercontent.com/stephenturner/806e31fce55a8b7175af/raw/1a507c4c3f9f1baaa3a69187223ff3d3050628d4/results.txt) 
+o	Check for duplicates and null values.
+o Create new column for negative log10 of p-values.
+
+2.	Generating volcano plot
+o  The plot of gene Log2FC against negative p-value 
+o	Thresholds were set for upregulated and downregulated genes which were significantly differentially expressed.
+
+3.	Identification of Differntially Expressed Genes (DEGs)
+o  Upregulated genes (Genes with Log2FC > 1 and pvalue < 0.01)
+o  Downregulated genes (Genes with Log2FC < -1 and pvalue < 0.01)
+
+#### Results & Findings
+
+Functions of top 10 Differntially Expressed Genes
+
+o  The functions of the top upregulated genes suggests that compound X may induce significant changes in the cellular environment, particularly affecting apoptosis and Extracellular Matrix organization.
+o  These alterations could either promote a beneficial reprogramming of diseased cells towards a more normal state or modulate the tissue microenvironment to better support repair and defense mechanisms.
+o  The changes in gene expression might therefore be part of the treatment's mechanism of action.
+o  Compound X might be beneficial in reducing apostosis (which is commonly found in neurogenerative and inflammatory conditions) as genes that mediate cell apostosis were downregulated.
 
 
 Here's the link to the [folder](https://github.com/aloyetunde/HackBio_Coding_Internship/tree/main/STAGE_2) containing our scripts , feel free to run the codes to replicate what we've done!😊
