@@ -1,7 +1,7 @@
 
 # 🚀 HackBio_Coding_Internship - #Team Leucine - Stage 2
 
-## Exploring Microbiology, Plant Science, Biochemistry & Transcriptomics Through Bioinformatics using Python! 😉😎💃
+## Exploring Microbiology, Plant Science, Biochemistry & Transcriptomics Through Bioinformatics using Python! 😉😎
 
 ✅ Microbiology 🦠: Analyzed bacterial growth curves, compared knockout vs. knock-in strains, and assessed statistical significance in carrying capacity.
 
