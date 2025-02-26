@@ -82,6 +82,7 @@ Questions:
 
 #### Result and Findings
 - Some metabolites change significantly in mutants, indicating differences in metabolism, stress response, or pesticide resistance.
+- The most significantly changing metabolites are: Citrulline, Cystine, Deoxyadenosine triphosphate, Adenosine monophosphate, Oxamic acid, Adenosine cyclic monophosphate, Arabitol, Uridine, Uridine monophosphate.
 - The scatter plot helps visualize overall trends, while the time-series plot shows dynamic changes over time.
 - Outlier metabolites are key targets for further study in plant biotechnology
 
