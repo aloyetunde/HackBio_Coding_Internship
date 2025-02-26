@@ -155,6 +155,7 @@ Functions of top 10 Differntially Expressed Genes
 o The functions of the top upregulated genes suggests that compound X may induce significant changes in the cellular environment, particularly affecting apoptosis and Extracellular Matrix organization.
 o These alterations could either promote a beneficial reprogramming of diseased cells towards a more normal state or modulate the tissue microenvironment to better support repair and defense mechanisms.
 o The changes in gene expression might therefore be part of the treatment's mechanism of action. o Compound X might be beneficial in reducing apostosis (which is commonly found in neurogenerative and inflammatory conditions) as genes that mediate cell apostosis were downregulated.
+"""
 
 #GitHub Link: https://github.com/aloyetunde/HackBio_Coding_Internship/blob/main/STAGE_2/task_2_6.py
 #LinkedIn Link: https://www.linkedin.com/posts/omojuwa-iyinoluwa-5a0249242_bioinformatics-phyton-hackbio-activity-7300504327775768577-uu6-?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADwxPAgBbnOT4_7yhFfQOdqRfEafIUZwkc4&utm_campaign=whatsapp
