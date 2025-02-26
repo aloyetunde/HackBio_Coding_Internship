@@ -80,6 +80,11 @@ Questions:
 - Finally, it selects six key metabolites with the most significant differences and plots their time-series trends (Oh → 8h → 24h) to visualize how pesticide resistance alters metabolism over time.
 - These visual outputs help identify potential biomarkers and metabolic pathways involved in pesticide resistance
 
+#### Result and Findings
+- Some metabolites change significantly in mutants, indicating differences in metabolism, stress response, or pesticide resistance.
+- The scatter plot helps visualize overall trends, while the time-series plot shows dynamic changes over time.
+- Outlier metabolites are key targets for further study in plant biotechnology
+
 ### 📌 Task Code 2.4: Biochemistry & Oncology
 
 This project analyzes the impact of non-synonymous mutations on protein structure and function. We use SIFT scores to measure functional effects and FoldX scores to assess structural stability.
